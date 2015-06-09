@@ -32,11 +32,7 @@ tibame	ALL=(ALL)	ALL
 
 - rpm -ivh jdk-8u40-linux-x64.rpm
 
-### 設定Java ~/.bashrc
 
-- export JAVA_HOME=/usr/java/jdk1.8.0_40/
-
-- export PATH=$PATH:$JAVA_HOME
 
 ### 設定Hadoop
 
@@ -61,6 +57,8 @@ tibame	ALL=(ALL)	ALL
 
 ### 編輯.bashrc
 - $ vim ~/.bashrc
+- export JAVA_HOME=/usr/java/jdk1.8.0_40/
+- export PATH=$PATH:$JAVA_HOME
 - export HADOOP_PREFIX=/usr/local/hadoop 
 - export HADOOP_COMMON_HOME=$HADOOP_PREFIX 
 - export HADOOP_HDFS_HOME=$HADOOP_PREFIX 
@@ -74,5 +72,16 @@ tibame	ALL=(ALL)	ALL
 ### 更新變數
 $ source ~/.bashrc
 
+### 嘗試是否可以無密碼登入
+- ssh localhost
 
+### 修改/etc/ssh/sshd_config
+#### 將PasswordAuthentication 變更為no
+- service sshd restart
+
+### 設置無密碼登入
+- ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
+- cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
+- chmod 700 ~/.ssh
+- chmod 600  ~/.ssh/authorized_keys
 
