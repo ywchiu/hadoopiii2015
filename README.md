@@ -54,6 +54,25 @@ tibame	ALL=(ALL)	ALL
 - sudo mv ~/hadoop-2.6.0 /usr/local/hadoop
 
 ###更改該目錄權限
-- sudo chown –R hadoop:hadoop /usr/local/hadoop
+- sudo chown -R hadoop:hadoop /usr/local/hadoop
+
+### 切換至Hadoop 使用者
+- sudo su – hadoop
+
+### 編輯.bashrc
+- $ vim ~/.bashrc
+- export HADOOP_PREFIX=/usr/local/hadoop 
+- export HADOOP_COMMON_HOME=$HADOOP_PREFIX 
+- export HADOOP_HDFS_HOME=$HADOOP_PREFIX 
+- export HADOOP_MAPRED_HOME=$HADOOP_PREFIX 
+- export HADOOP_YARN_HOME=$HADOOP_PREFIX 
+- export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_PREFIX/lib/native
+- export HADOOP_OPTS="-Djava.library.path=$HADOOP_PREFIX/lib"
+- export HADOOP_CONF_DIR=$HADOOP_PREFIX/etc/hadoop 
+- export PATH=$PATH:$HADOOP_PREFIX/bin:$HADOOP_PREFIX/sbin
+
+### 更新變數
+$ source ~/.bashrc
+
 
 
