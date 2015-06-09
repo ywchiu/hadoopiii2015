@@ -37,3 +37,23 @@ tibame	ALL=(ALL)	ALL
 - export JAVA_HOME=/usr/java/jdk1.8.0_40/
 
 - export PATH=$PATH:$JAVA_HOME
+
+### 設定Hadoop
+
+- wget http://ftp.twaren.net/Unix/Web/apache/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
+
+- tar -zxvf hadoop-2.6.0.tar.gz
+
+### 新增群組hadoop
+- $ sudo groupadd hadoop
+
+### 建立 hadoop 使用者並將hadoop加入hadoop 群組
+- $ sudo useradd -g hadoop hadoop
+
+### 將Hadoop 2.6.0 搬移到 /usr/local
+- sudo mv ~/hadoop-2.6.0 /usr/local/hadoop
+
+###更改該目錄權限
+- sudo chown –R hadoop:hadoop /usr/local/hadoop
+
+
