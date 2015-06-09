@@ -57,7 +57,7 @@ tibame	ALL=(ALL)	ALL
 - sudo chown -R hadoop:hadoop /usr/local/hadoop
 
 ### 切換至Hadoop 使用者
-- sudo su – hadoop
+- sudo su - hadoop
 
 ### 編輯.bashrc
 - $ vim ~/.bashrc
