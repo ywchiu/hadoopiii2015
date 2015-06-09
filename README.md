@@ -57,7 +57,7 @@ tibame	ALL=(ALL)	ALL
 
 ### 編輯.bashrc
 - $ vim ~/.bashrc
-- export JAVA_HOME=/usr/java/jdk1.8.0_40/
+- export JAVA_HOME=/usr/java/jdk1.8.0_45/
 - export PATH=$PATH:$JAVA_HOME
 - export HADOOP_PREFIX=/usr/local/hadoop 
 - export HADOOP_COMMON_HOME=$HADOOP_PREFIX 
@@ -85,7 +85,12 @@ $ source ~/.bashrc
 - chmod 700 ~/.ssh
 - chmod 600  ~/.ssh/authorized_keys
 
-### 更新JAVA_HOME (hadoop_env.sh)
-- vi /usr/local/hadoop/etc/hadoop/hadoop-env.sh
-- JAVA_HOME=/usr/java/jdk1.8.0_45/
+### 格式化HDFS
+- hdfs namenode -format
+
+### 啟用HDFS及YARN
+- start-dfs.sh
+- start-yarn.sh
+
+
 
