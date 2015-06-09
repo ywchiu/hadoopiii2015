@@ -75,8 +75,8 @@ $ source ~/.bashrc
 ### 嘗試是否可以無密碼登入
 - ssh localhost
 
-### 修改/etc/ssh/sshd_config
-#### 將PasswordAuthentication 變更為no
+修改/etc/ssh/sshd_config
+- 將PasswordAuthentication 變更為no
 - service sshd restart
 
 ### 設置無密碼登入
@@ -84,4 +84,8 @@ $ source ~/.bashrc
 - cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 - chmod 700 ~/.ssh
 - chmod 600  ~/.ssh/authorized_keys
+
+### 更新JAVA_HOME (hadoop_env.sh)
+- vi /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+- JAVA_HOME=/usr/java/jdk1.8.0_45/
 
