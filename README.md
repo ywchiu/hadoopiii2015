@@ -92,5 +92,7 @@ $ source ~/.bashrc
 - start-dfs.sh
 - start-yarn.sh
 
+### Blog Data
+- http://www.race.u-tokyo.ac.jp/~uchida/blogdata/sclick.php?UID=blogdata1.tgz&URL=./blogdata1.tgz
 
 
