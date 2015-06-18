@@ -1,0 +1,37 @@
+﻿//下載Flume
+wget http://apache.stu.edu.tw/flume/1.5.2/apache-flume-1.5.2-bin.tar.gz
+
+//安裝Flume
+tar -zxvf apache-flume-1.5.2-bin.tar.gz 
+
+//搬移目錄
+sudo mv apache-flume-1.5.2-bin /usr/local/flume
+
+
+//修改/etc/profile 或 ~/.bashrc
+export FLUME_HOME=/usr/local/flume/
+export FLUME_CONF_DIR=/usr/local/flume/conf
+export PATH=$PATH:$FLUME_HOME/bin
+
+//讓設定生效
+source ~/.bashrc
+
+//Retrieve log generator from GitHub
+wget https://github.com/ywchiu/hadoopiii2/raw/master/Flume/log-generator.py
+
+//Use log-generator.py to generate log
+python log-generator.py
+
+//Examine generated file log
+tail -F /tmp/log-generator.log
+
+//Retrieve agent configs from GitHub
+wget https://github.com/ywchiu/hadoopiii2/raw/master/Flume/agent2.properties
+wget https://github.com/ywchiu/hadoopiii2/raw/master/Flume/agent1.properties
+
+//Start flume-1 agent and flume-2 agent
+flume-ng agent --conf-file agent2.properties --name agent2
+flume-ng agent --conf-file agent1.properties --name agent1
+
+//Examine running service
+netstat -tunlp | grep 5566
