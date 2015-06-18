@@ -34,7 +34,7 @@ cp /usr/share/java/mysql-connector-java.jar /usr/local/sqoop/lib
 
 //Import ratings from mysql to HDFS
 //sqoop import --connect jdbc:mysql://localhost:3306/yelp -username root --table ratings -target-dir /sqoop/ratings -m1
-sqoop import --connect jdbc:mysql://localhost:3306/yelp -username root -password cloudera --query "select * from ratings where 1=1 and \$CONDITIONS limit 2000" -target-dir /sqoop/ratings -m1
+sqoop import --connect jdbc:mysql://localhost:3306/yelp -username root  --query "select * from ratings where 1=1 and \$CONDITIONS limit 2000" -target-dir /sqoop/ratings -m1
 
 //Download create-ratings_tmp.sql from GitHub
 wget https://github.com/ywchiu/hadoopiii2/raw/master/Sqoop/create-ratings_tmp.sql
