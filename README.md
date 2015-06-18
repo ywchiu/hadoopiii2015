@@ -95,4 +95,8 @@ $ source ~/.bashrc
 ### Blog Data
 - http://www.race.u-tokyo.ac.jp/~uchida/blogdata/sclick.php?UID=blogdata1.tgz&URL=./blogdata1.tgz
 
+### 安裝rar, unrar
+- wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.i686.rpm
+- rpm -Uvh rpmforge-release-0.5.2-2.el6.rf.i686.rpm
+- yum install rar unrar
 
