@@ -1,3 +1,9 @@
+//Install MySQL
+sudo yum install mysql mysql-server mysql-connector-java
+
+sudo chkconfig mysqld on
+sudo /etc/init.d/mysqld start
+
 //Download Yelp_All.zip from GitHub 
 wget https://github.com/ywchiu/hadoopiii2/raw/master/Sqoop/Yelp_ALL.zip
 
