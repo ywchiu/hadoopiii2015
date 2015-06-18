@@ -1,17 +1,17 @@
 ﻿//下載Flume
-wget http://apache.stu.edu.tw/flume/1.5.2/apache-flume-1.5.2-bin.tar.gz
+wget http://apache.stu.edu.tw/flume/1.6.0/apache-flume-1.6.0-bin.tar.gz
 
 //安裝Flume
-tar -zxvf apache-flume-1.5.2-bin.tar.gz 
+tar -zxvf apache-flume-1.6.0-bin.tar.gz 
 
 //搬移目錄
-sudo mv apache-flume-1.5.2-bin /usr/local/flume
+sudo mv apache-flume-1.6.0-bin /usr/local/flume
 
 
 //修改/etc/profile 或 ~/.bashrc
 export FLUME_HOME=/usr/local/flume/
 export FLUME_CONF_DIR=/usr/local/flume/conf
-export PATH=$PATH:$FLUME_HOME/bin
+export PATH=$PATH:$FLUME_HOME/bin
 
 //讓設定生效
 source ~/.bashrc
