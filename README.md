@@ -100,3 +100,5 @@ $ source ~/.bashrc
 - rpm -Uvh rpmforge-release-0.5.2-2.el6.rf.i686.rpm
 - yum install rar unrar
 
+### 5.2 Cloudera Quickstart VM
+- https://downloads.cloudera.com/demo_vm/vmware/cloudera-quickstart-vm-5.2.0-0-vmware.7z
