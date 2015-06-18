@@ -11,10 +11,10 @@ wget https://github.com/ywchiu/hadoopiii2/raw/master/Sqoop/Yelp_ALL.zip
 unzip Yelp_ALL.zip
 
 //Create yelp database in mysql
-mysql -uroot -p -e "CREATE DATABASE yelp"
+mysql -uroot -e "CREATE DATABASE yelp"
 
 //Examine databases
-mysql -uroot -p -e "SHOW DATABASES"
+mysql -uroot -e "SHOW DATABASES"
 
 //Download create-ratings.sql from GitHub
 wget https://github.com/ywchiu/hadoopiii2/raw/master/Sqoop/create-ratings.sql
