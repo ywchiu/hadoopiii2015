@@ -60,6 +60,10 @@ $ source ~/.bashrc
 - chmod 700 ~/.ssh
 - chmod 600  ~/.ssh/authorized_keys
 
+### Reference following link to revise file respectively
+- /usr/local/hadoop/etc/hadoop/
+- https://github.com/ywchiu/hadoopiii2015/blob/master/pseudo-distribution.xml
+
 ### 格式化HDFS
 - hdfs namenode -format
 
