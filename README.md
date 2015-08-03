@@ -30,6 +30,8 @@
 
 - tar -zxvf hadoop-2.6.0.tar.gz
 
+- sudo mv hadoop-2.6.0 /usr/local/hadoop
+
 ### 編輯.bashrc
 - $ vim ~/.bashrc
 - export JAVA_HOME=/usr/java/jdk1.8.0_51/
@@ -50,7 +52,7 @@ $ source ~/.bashrc
 ### 嘗試是否可以無密碼登入
 - ssh localhost
 
-修改/etc/ssh/sshd_config
+修改sudo vi /etc/ssh/sshd_config
 - 將PasswordAuthentication 變更為no
 - sudo service sshd restart
 
