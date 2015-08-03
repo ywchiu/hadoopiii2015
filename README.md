@@ -1,5 +1,10 @@
 # hadoopiii2015
 
+
+## Slides:
+- https://www.slideshare.net/secret/MD4bBCWKjGNTIW
+
+
 ## vm download
 
 - https://downloads.cloudera.com/demo_vm/vmware/cloudera-quickstart-vm-5.2.0-0-vmware.7z
