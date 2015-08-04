@@ -4,6 +4,9 @@
 ## Slides:
 - https://www.slideshare.net/secret/MD4bBCWKjGNTIW
 
+## Eclipse:
+- http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/R/eclipse-java-mars-R-linux-gtk-x86_64.tar.gz&mirror_id=1207
+
 
 ## vm download
 
